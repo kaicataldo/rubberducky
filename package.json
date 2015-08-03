@@ -1,0 +1,24 @@
+{
+  "name": "rubber-ducky",
+  "version": "0.1.0",
+  "description": "Stuck on a problem? Never be without your rubber ducky again.",
+  "main": "index.js",
+  "bin": {
+    "ducky": "bin/ducky.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kai Cataldo <kaicataldo@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaicataldo/rubber-ducky.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaicataldo/rubber-ducky/issues"
+  },
+  "dependencies": {
+    "chalk": "^1.1.0"
+  }
+}
