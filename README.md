@@ -1,2 +1,5 @@
 # rubber-ducky
-Rubber ducky debugging command line utility
+Rubber duck debugging command line utility
+
+## Todo:
+ * Add ability to change goal/steps
