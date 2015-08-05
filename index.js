@@ -5,6 +5,7 @@ var readline = require('readline'),
 function rubberDucky() {
   var explaining = false,
       helping = false,
+      changingGoal = false,
       yellow = chalk.yellow,
       red = chalk.red,
       white = chalk.white,
@@ -34,7 +35,6 @@ function rubberDucky() {
       console.log('');
       console.log('recap              ' + 'Recap your goal and steps');
       console.log('change goal        ' + 'Change your goal');
-      console.log('change step [num]  ' + 'Change a specific step [num] (Ex: edit step 1)');
       console.log('change steps       ' + 'Start your steps over');
       console.log('done               ' + 'Finish steps');
       console.log('exit               ' + 'Quit (Yay, you solved it!)');
@@ -65,8 +65,8 @@ function rubberDucky() {
 
     explain: function() {
       explaining = true;
-      console.log('\nCan you exlain how you\'ve tried to solve that problem, step by step?\nType ' + bold('done')
-      + ' when you\'re finished, or ' + bold('help') + ' if you need it.\n');
+      console.log('\nCan you exlain how you\'ve tried to solve that problem, step by step?\nType '
+      + bold('done') + ' when you\'re finished, or ' + bold('help') + ' if you need it.\n');
       interface.setPrompt(counter + ': ');
       interface.prompt();
       counter++;
@@ -93,13 +93,14 @@ function rubberDucky() {
         console.log('Nothing shared yet!');
       }
       else {
-        console.log(bold('\nGoal: ' + goal));
+        console.log(bold('\nGoal: ') + goal);
 
         if (answers.explanations.length > 0) {
+          console.log(bold('\nSteps:'));
           for (var i = 0; i < answers.explanations.length; i++) {
             var num = i + 1;
 
-            console.log(bold(num + ": " + answers.explanations[i]));
+            console.log(bold(' ' + num + ") ") + answers.explanations[i]);
           }
         }
         else {
@@ -131,8 +132,25 @@ function rubberDucky() {
     else if (input === 'recap') {
       duckySays.recap();
     }
-    else if (helping) {
+    else if (input === 'change goal') {
+      changingGoal = true;
 
+      console.log('\nChange goal:');
+      interface.write(answers.goal || '');
+    }
+     else if (input === 'change steps') {
+      answers.explanations = [];
+      counter = 1;
+
+      duckySays.explain();
+    }
+    else if (changingGoal) {
+      changingGoal = false;
+      answers.goal = input;
+      duckySays.recap();
+    }
+    else if (helping) {
+      duckySays.recap();
     }
     else if (explaining) {
       if (input === 'done') {
@@ -150,9 +168,7 @@ function rubberDucky() {
     else {
       console.log('');
       console.log('I\'m not sure what you mean! Type ' +
-      bold('help') + ' to see your options, or ' + bold('exit')
-      + ' if you\'re done.');
-      console.log('');
+      bold('help') + ' to see your options, or ' + bold('exit') + ' if you\'re done.');
     }
   });
 
