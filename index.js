@@ -4,7 +4,6 @@ var readline = require('readline'),
 
 function rubberDucky() {
   var explaining = false,
-      helping = false,
       changingGoal = false,
       yellow = chalk.yellow,
       red = chalk.red,
@@ -28,7 +27,6 @@ function rubberDucky() {
     },
 
     help: function() {
-      helping = true;
       console.log('');
       console.log(yellow.bold('Rubber Ducky Help'));
       console.log(yellow.bold('-----------------'));
@@ -65,7 +63,7 @@ function rubberDucky() {
 
     explain: function() {
       explaining = true;
-      console.log('\nCan you exlain how you\'ve tried to solve that problem, step by step?\nType '
+      console.log('\nCan you exlain the steps you\'ve taken to solve that problem?\nType '
       + bold('done') + ' when you\'re finished, or ' + bold('help') + ' if you need it.\n');
       interface.setPrompt(counter + ': ');
       interface.prompt();
@@ -138,7 +136,7 @@ function rubberDucky() {
       console.log('\nChange goal:');
       interface.write(answers.goal || '');
     }
-     else if (input === 'change steps') {
+    else if (input === 'change steps') {
       answers.explanations = [];
       counter = 1;
 
@@ -147,9 +145,6 @@ function rubberDucky() {
     else if (changingGoal) {
       changingGoal = false;
       answers.goal = input;
-      duckySays.recap();
-    }
-    else if (helping) {
       duckySays.recap();
     }
     else if (explaining) {
