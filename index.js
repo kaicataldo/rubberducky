@@ -63,8 +63,8 @@ function rubberDucky() {
 
     explain: function() {
       explaining = true;
-      console.log('\nCan you exlain the steps you\'ve taken to solve that problem?\nType '
-      + bold('done') + ' when you\'re finished, or ' + bold('help') + ' if you need it.\n');
+      console.log('\nCan you exlain the steps you\'ve taken to solve that problem?\nType ' +
+        bold('done') + ' when you\'re finished, or ' + bold('help') + ' if you need it.\n');
       interface.setPrompt(counter + ': ');
       interface.prompt();
       counter++;
