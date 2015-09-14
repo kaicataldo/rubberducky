@@ -1,5 +1,5 @@
 # rubber-ducky
-Rubber duck debugging command line utility
+Proof of concept for a rubber duck debugging command line utility
 ```
            _.._
           / a a\__,
@@ -10,6 +10,7 @@ Rubber duck debugging command line utility
  \_   (__       /
    \___________/
 ```
+
 ### Inspiration
 Inspired by the concept of rubber duck debugging. If you're unfamiliar with the concept:
  * [Wikipedia's Article on Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
