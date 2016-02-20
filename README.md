@@ -1,5 +1,5 @@
-# rubber-ducky
-Proof of concept for a rubber duck debugging command line utility
+# rubberducky
+rubber duck debugging command line utility
 ```
            _.._
           / a a\__,
@@ -10,11 +10,21 @@ Proof of concept for a rubber duck debugging command line utility
  \_   (__       /
    \___________/
 ```
+### usage
+```
+$ npm install -g rubberducky
+$ ducky
+```
 
-### Inspiration
-Inspired by the concept of rubber duck debugging. If you're unfamiliar with the concept:
- * [Wikipedia's Article on Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
- * [rubberduckdebugging.com](http://www.rubberduckdebugging.com/)
- * [This post from Coding Horror](http://blog.codinghorror.com/rubber-duck-problem-solving/)
+### info
+rubber duck debugging asserts that solutions to problems oftentimes present themselves when one is forced to verbalize the problem and the steps taken to attempt to solve said problem. the duck is merely a friendly face for you to talk to, to have to explain to.
 
-Intended for those who are working through a tough problem and might not have a rubber duck on hand (or want to be seen speaking to an inanimate object at work!).
+in the end, this is not so different from talking out loud to yourself, and in fact, you'd actually be talking to a real person then...so you can try that instead, if you want – just don't be surprised if your co-workers become alarmed or concerned.
+
+speaking to a duck eliminates this unnecessary stress on your peers and will help you articulate more clearly and without assumed knowledge on the part of the listener (the aforementioned duck). you're of course free to live your life as you wish, but trust me, you wanna talk to the duck.
+
+### more info
+[rubberduckdebugging.com](http://www.rubberduckdebugging.com/)  
+[Wikipedia's Article on Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)  
+[This post from Coding Horror](http://blog.codinghorror.com/rubber-duck-problem-solving/)  
+
