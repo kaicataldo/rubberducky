@@ -1,24 +1,27 @@
 {
-  "name": "rubber-ducky",
-  "version": "1.0.2",
+  "name": "rubberducky",
+  "version": "2.0.0",
   "description": "Stuck on a problem? Never be without your rubber ducky again.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
     "ducky": "bin/ducky.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kai Cataldo <kaicataldo@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaicataldo/rubber-ducky.git"
+    "url": "https://github.com/kaicataldo/rubberducky.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaicataldo/rubber-ducky/issues"
+    "url": "https://github.com/kaicataldo/rubberducky/issues"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babel-register": "^6.5.2",
     "chalk": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-plugin-promise": "^1.0.8"
   }
 }

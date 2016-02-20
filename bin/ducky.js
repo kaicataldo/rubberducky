@@ -1,5 +1,3 @@
 #!/usr/bin/env node
-
-var rubberDucky = require('../index');
-
-rubberDucky();
+require('babel-register');
+var rubberDucky = require('../lib');
