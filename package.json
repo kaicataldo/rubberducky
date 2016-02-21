@@ -1,6 +1,6 @@
 {
   "name": "rubberducky",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Stuck on a problem? Never be without your rubber ducky again.",
   "main": "./bin/ducky.js",
   "bin": {
