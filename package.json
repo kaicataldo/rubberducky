@@ -1,6 +1,6 @@
 {
   "name": "rubberducky",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "rubber duck debugging on the command line",
   "scripts": {
     "prepublish": "npm run build",
