@@ -12,36 +12,34 @@ const textMap = {
   ],
   ducky: [
     '',
-    yellow('           _.._'),
-    yellow('          / ') + 'a a' + yellow('\\') + red('__,'),
-    yellow('          \\  ') + red('-.___/'),
-    yellow('           \\  \\'),
-    yellow('(\\__,-----,_)  \\'),
-    yellow('(    (_         )'),
-    yellow(' \\_   (__       /'),
-    yellow('   \\___________/'),
+    yellow.bold('           _.._'),
+    yellow.bold('          / ') + chalk.bold('a a') + yellow.bold('\\') + red.bold('__,'),
+    yellow.bold('          \\  ') + red.bold('-.___/'),
+    yellow.bold('           \\  \\'),
+    yellow.bold('(\\__,-----,_)  \\'),
+    yellow.bold('(    (_         )'),
+    yellow.bold(' \\_   (__       /'),
+    yellow.bold('   \\___________/'),
     ''
   ],
-  expected: '\ncan you explain to me what you want your code to do?\n',
-  actual: '\nand can you go over what your code is actually doing, line by line?',
+  expected: yellow('\ncan you explain to me what you want your code to do?\n'),
+  actual: yellow('\nand can you go over what your code is actually doing, line by line?'),
   info: [
     '',
     yellow.bold('info'),
-    yellow.bold('-----------------'),
-    'rubber duck debugging asserts that solutions to problems oftentimes present themselves when one is forced to verbalize the problem and the steps taken to attempt to solve said problem. the duck is merely a friendly face for you to talk to, to have to explain to.',
+    yellow('rubber duck debugging ') + 'asserts that ' + yellow('solutions to problems oftentimes present themselves when one is forced to verbalize the problem and the steps taken to attempt to solve said problem') + '. the duck is merely a friendly face for you to talk to, to have to explain to.',
     '',
-    'in the end, this is not so different from talking out loud to yourself, and in fact, you\'d actually be talking to a real person then...so you can try that instead, if you want – just don\'t be surprised if your co-workers become alarmed or concerned.',
+    'in the end, this is not so different from talking out loud to yourself, and in fact, you\'d actually be talking to a real person then. so you can try that instead, if you want – just don\'t be surprised if your co-workers become alarmed or concerned.',
     '',
-    'speaking to a duck eliminates this unnecessary stress on your peers and will help you articulate more clearly and without assumed knowledge on the part of the listener (the aforementioned duck). you\'re of course free to live your life as you wish, but trust me, you wanna talk to the duck.',
+    'speaking to a duck eliminates this unnecessary stress on your peers and will help you articulate more clearly and ' + yellow('without assumed knowledge on the part of the listener ') + '(the aforementioned duck). you\'re of course free to live your life as you choose, but trust me, ' + yellow('you probably wanna talk to the duck') + '.',
     '',
     yellow.bold('more info'),
-    yellow.bold('-----------------'),
     '[rubberduckdebugging.com]' + yellow('(http://www.rubberduckdebugging.com/)'),
     '[Wikipedia\'s Article on Rubber Duck Debugging]' + yellow('(https://en.wikipedia.org/wiki/Rubber_duck_debugging)'),
     '[This post from Coding Horror]' + yellow('(http://blog.codinghorror.com/rubber-duck-problem-solving/)'),
     ''
   ],
-  exit: yellow.bold('\nquack.')
+  exit: yellow('\nquack.')
 };
 
 class RubberDucky {
@@ -70,14 +68,14 @@ class RubberDucky {
 
   start() {
     this.print(textMap.system);
-    this.print(textMap.ducky);
     this.firstStep();
   }
 
   firstStep() {
+    this.print(textMap.ducky);
     this.interface.question(textMap.expected, (input) => {
       this.onInput(input);
-      this.currentStep = input === 'info' ? 1 : 2;
+      this.currentStep = input === 'info' || input === 'restart' ? 1 : 2;
 
       if (this.currentStep === 2) {
         this.print(textMap.actual);
@@ -93,6 +91,7 @@ class RubberDucky {
         if (this.currentStep === 1) {
           this.firstStep();
         } else if (this.currentStep === 2) {
+          this.print(textMap.ducky);
           this.print(textMap.actual);
         }
       });
