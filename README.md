@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/rubberducky.png)](https://nodei.co/npm/rubberducky/)
+
 # rubberducky
 rubber duck debugging command line utility
 ```
