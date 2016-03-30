@@ -1,6 +1,6 @@
 {
   "name": "rubberducky",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "rubber duck debugging on the command line",
   "scripts": {
     "build": "babel src -d lib",
