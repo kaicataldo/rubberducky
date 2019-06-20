@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-require('../lib');
+
+'use strict';
+
+const RubberDucky = require('../lib');
+new RubberDucky();
