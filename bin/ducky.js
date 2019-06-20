@@ -3,4 +3,8 @@
 'use strict';
 
 const RubberDucky = require('../lib');
-new RubberDucky();
+
+const args = process.argv.slice(2);
+const interactive = args[0] === '--interactive';
+
+new RubberDucky({ interactive });
