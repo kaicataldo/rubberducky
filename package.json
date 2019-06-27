@@ -1,7 +1,7 @@
 {
   "name": "rubberducky",
   "version": "2.1.0",
-  "description": "rubber duck debugging on the command line",
+  "description": "A command line utility for rubber duck debugging",
   "author": "Kai Cataldo <kaicataldo@gmail.com>",
   "repository": {
     "type": "git",
@@ -18,9 +18,9 @@
     "lint": "eslint .",
     "prettier": "prettier --write '**/*.js'"
   },
-  "main": "bin/ducky.js",
+  "main": "bin/rubberducky.js",
   "bin": {
-    "ducky": "bin/ducky.js"
+    "rubberducky": "bin/rubberducky.js"
   },
   "husky": {
     "hooks": {
