@@ -42,6 +42,6 @@ $ rubberducky
 
 ### More information
 
-[rubberduckdebugging.com](https://www.rubberduckdebugging.com/)
-[Wikipedia's Article on Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
-[This post from Coding Horror](https://blog.codinghorror.com/rubber-duck-problem-solving/)
+* [rubberduckdebugging.com](https://www.rubberduckdebugging.com)
+* [Wikipedia's Article on Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)
+* [This post from Coding Horror](https://blog.codinghorror.com/rubber-duck-problem-solving)
