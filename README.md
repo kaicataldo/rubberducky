@@ -1,4 +1,4 @@
-[![NPM](https://nodei.co/npm/rubberducky.png)](https://nodei.co/npm/rubberducky/)
+[![NPM](https://img.shields.io/npm/v/rubberducky.svg)](https://www.npmjs.com/package/rubberducky)
 
 # rubberducky
 
