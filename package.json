@@ -1,6 +1,6 @@
 {
   "name": "rubberducky",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A command line utility for rubber duck debugging",
   "author": "Kai Cataldo <kaicataldo@gmail.com>",
   "repository": {
