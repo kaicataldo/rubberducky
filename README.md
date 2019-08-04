@@ -32,7 +32,7 @@ $ rubberducky
 * `restart` - start over with a clean slate
 * `interactive` - start interactive mode (this can also be enabled on the command line with the `--interactive` flag)
 * `noninteractive` - end interactive mode
-* `info` - show information about `rubberducky`, including possible commands and links to more information
+* `help` - show information about `rubberducky`, including possible commands and links to more information
 
 ### Interactive mode
 
