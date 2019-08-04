@@ -15,7 +15,7 @@ A command line utility for rubber duck debugging
    \___________/
 ```
 
-`rubberducky` is a command line tool that allows you to have a rubber duck quickly available to you any time you you're feeling stuck solving a problem.
+`rubberducky` is a command line tool that allows you to have a rubber duck quickly available to you any time you're feeling stuck solving a problem.
 
 ### Usage
 
