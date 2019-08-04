@@ -19,6 +19,12 @@
     "prettier": "prettier --write '**/*.js'"
   },
   "main": "bin/rubberducky.js",
+  "files": [
+    "bin",
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
   "bin": {
     "rubberducky": "bin/rubberducky.js"
   },
